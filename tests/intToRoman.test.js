@@ -39,30 +39,36 @@ describe('intToRoman', () => {
     [3999, 'MMMCMXCIX'],
   ]);
   for (let num of testRomanNumerals.keys()) {
-    test('should be a string given positive integer', () => {
+    test('should be a string given positive integer as parameter', () => {
       expect(intToRoman(num)).toBe(testRomanNumerals.get(num));
     });
   }
 
-  test('should throw error given a negative integer', () => {
+  test('should throw error given a negative integer as parameter', () => {
     expect(() => intToRoman(-1)).toThrow(
       `your query value (value: -1) is negative, please enter a positive integer value as a valid query value`
     );
   });
 
-  test('should throw error given a positive decimal', () => {
+  test('should throw error given zero as parameter', () => {
+    expect(() => intToRoman(0)).toThrow(
+      `your query value is zero, please enter a positive integer value as a valid query value`
+    );
+  });
+
+  test('should throw error given a positive decimal as parameter', () => {
     expect(() => intToRoman(1.1)).toThrow(
       `your query value (value: 1.1) is not a positive integer, please enter a positive integer value as a valid query value (e.g. 1, 5, 10)`
     );
   });
 
-  test('should throw error given parameter of invalid type boolean', () => {
+  test('should throw error given invalid type boolean as parameter', () => {
     expect(() => intToRoman(true)).toThrow(
       `your query value (type: boolean) is invalid, please enter a positive integer value as a valid query value`
     );
   });
 
-  test('should throw error given parameter of invalid type string', () => {
+  test('should throw error given invalid type string as parameter', () => {
     expect(() => intToRoman('SOME_STRING')).toThrow(
       `your query value (type: string) is invalid, please enter a positive integer value as a valid query value`
     );
