@@ -1,6 +1,19 @@
 # Integer to Roman Numeral API
 
-REST API for getting a roman numeral conversion of an integer value.
+REST API for getting a Roman Numeral conversion of an integer value.
+
+Sample REST API call:
+
+    GET http://localhost:5000/romannumeral?query=1
+
+    description:
+        get Roman Numeral conversion of query value as integer
+
+    request:
+        ?query=1
+
+    response: 
+        I
 
 ## Table of Contents
 
@@ -19,8 +32,12 @@ You may run this app one of three ways
 
 ### Running Locally
 
-After cloning repo, change directory into location where repo was cloned and then run the following command:
-
+In order to run locally you will need to install [Node.js](https://nodejs.org/en/) and then install all the npm packages with the following command:
+    
+    npm install
+    
+After installing all the required packages, run the following command to run the app locally:
+    
     npm run start
 
 To run app in development mode:
