@@ -2,6 +2,14 @@
 
 REST API for getting a roman numeral convertion of an integer value.
 
+## Table of Contents
+
+1. [Running the App](#running-the-app)
+2. [Approach](#approach)
+3. [Constraints](#constraints)
+4. [Structure](#structure)
+5. [Dependencies](#dependencies)
+
 ## Running the App
 
 You may run this app one of three ways 
