@@ -28,4 +28,12 @@ describe('GET /romannumeral', () => {
       `your query value (value: SOME_STRING) is invalid, please enter a positive integer value as a valid query value (e.g. 1, 5, 10)`
     );
   });
+
+  test('should get error given decimal as query value', async () => {
+    const res = await request.get('/romannumeral').query({ query: '1.5' });
+    expect(res.status).toBe(400);
+    expect(res.text).toBe(
+      `your query value (value: 1.5) is not a positive integer, please enter a positive integer value as a valid query value (e.g. 1, 5, 10)`
+    );
+  });
 });

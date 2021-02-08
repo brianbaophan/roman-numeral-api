@@ -17,6 +17,11 @@ app.get('/romannumeral', (req, res) => {
       res.status(400).send(message);
       throw new Error(message);
     }
+    if (!Number.isInteger(num)) {
+      const message = `your query value (value: ${req.query.query}) is not a positive integer, please enter a positive integer value as a valid query value (e.g. 1, 5, 10)`;
+      res.status(400).send(message);
+      throw new Error(message);
+    }
     res.send(intToRoman(num));
     console.log('Request finished');
   } catch (err) {
