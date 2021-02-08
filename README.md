@@ -4,16 +4,16 @@ REST API for getting a Roman Numeral conversion of an integer value.
 
 Sample REST API call:
 
-    GET http://localhost:5000/romannumeral?query=1
+    GET http://localhost:5000/romannumeral?query=<YOUR_INTEGER_VALUE>
 
     description:
         get Roman Numeral conversion of query value as integer
 
     request:
-        ?query=1
+        ?query=<YOUR_INTEGER_VALUE>
 
     response: 
-        I
+        <ROMAN_NUMERAL_VALUE>
 
 ## Table of Contents
 
@@ -53,14 +53,14 @@ To run app in test mode:
 Build the image first (name it `roman-numeral-api` or your preferred name). Run the image (with name `roman-numeral-api` or your chosen image name) on port `5000` (or your preferred port)
 
     docker build -t roman-numeral-api .
-    docker run -p 5000:5000 -d roman-numeral-api
+    docker run -p 5000:5000 roman-numeral-api
   
 ### Pulling Image from DockerHub
 
 The app can be found in my personal DockerHub (reference: https://hub.docker.com/r/brianbaophan/roman-numeral-api)
 
     docker pull brianbaophan/roman-numeral-api
-    docker run -p 5000:5000 -d roman-numeral-api
+    docker run -p 5000:5000 brianbaophan/roman-numeral-api
 
 ## Approach
 
