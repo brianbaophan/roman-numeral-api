@@ -1,6 +1,6 @@
 # Integer to Roman Numeral API
 
-REST API for getting a roman numeral convertion of an integer value.
+REST API for getting a roman numeral conversion of an integer value.
 
 ## Table of Contents
 
