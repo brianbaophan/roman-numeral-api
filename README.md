@@ -77,7 +77,6 @@ Any query value of the above types will throw an error with status code of `400`
 
     ├── Dockerfile
     ├── README.md
-    ├── coverage
     ├── node_modules
     ├── package-lock.json
     ├── package.json
