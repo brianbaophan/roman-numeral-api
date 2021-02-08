@@ -59,7 +59,7 @@ Build the image first (name it `roman-numeral-api` or your preferred name). Run 
 
 The app can be found in my personal DockerHub (reference: https://hub.docker.com/r/brianbaophan/roman-numeral-api)
 
-    docker pull brianbaophan/roman-numeral-api:1.0.0 or docker pull brianbaophan/roman-numeral-api:1.0.0:latest
+    docker pull brianbaophan/roman-numeral-api
     docker run -p 5000:5000 -d roman-numeral-api
 
 ## Approach
